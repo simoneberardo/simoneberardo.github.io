@@ -178,3 +178,65 @@ footer a:hover {
 .theme-toggle:hover {
   background-color: #333;
 }
+
+/* Light Theme */
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #1e1e1e;
+}
+
+body.light-theme .container {
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .profile-pic {
+  border: 4px solid #ddd;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme header h1,
+body.light-theme header h2 {
+  color: #1e1e1e;
+}
+
+body.light-theme .bio,
+body.light-theme .card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+body.light-theme .card h4,
+body.light-theme .projects h3,
+body.light-theme .interests h3 {
+  color: #1e1e1e;
+}
+
+body.light-theme .card p,
+body.light-theme .bio p,
+body.light-theme footer {
+  color: #444;
+}
+
+body.light-theme footer a,
+body.light-theme .btn {
+  color: #1e1e1e;
+}
+
+body.light-theme .btn {
+  background-color: #a5b4fc;
+}
+
+body.light-theme .btn:hover {
+  background-color: #818cf8;
+}
+
+body.light-theme .theme-toggle {
+  border-color: #333;
+  color: #333;
+}
+
+body.light-theme .theme-toggle:hover {
+  background-color: #e0e0e0;
+}
