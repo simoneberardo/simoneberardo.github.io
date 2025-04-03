@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simone Berardo | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
   <div class="container">
     <header>
-      <img src="foto.jpg" alt="Foto profilo di Simone" class="profile-pic">
+      <a href="contatti.html">
+        <img src="foto.jpg" alt="Foto profilo di Simone" class="profile-pic" />
+      </a>
       <h1>Simone Berardo</h1>
       <h2>Sistemista IT</h2>
     </header>
@@ -28,26 +31,65 @@
 
     <section class="projects">
       <h3>📁 Progetti</h3>
-      <ul>
-        <li><strong>Tool di monitoraggio interno:</strong> script Python per raccogliere info su rete e sistema</li>
-        <li><strong>Firewall dashboard:</strong> interfaccia web semplificata per analizzare log di rete</li>
-        <!-- Aggiungi qui altri progetti in futuro -->
-      </ul>
+      <div class="grid">
+        <div class="card">
+          <img src="progetto1.jpg" alt="Anteprima progetto 1">
+          <h4>Monitoraggio interno</h4>
+          <p>Script Python per monitoraggio rete e sistema.</p>
+        </div>
+        <div class="card">
+          <img src="progetto2.jpg" alt="Anteprima progetto 2">
+          <h4>Firewall dashboard</h4>
+          <p>Dashboard web per analisi dei log di rete.</p>
+        </div>
+        <div class="card">
+          <img src="progetto3.jpg" alt="Anteprima progetto 3">
+          <h4>Backup automation</h4>
+          <p>Script per gestione backup automatici su rete.</p>
+        </div>
+        <div class="card">
+          <img src="progetto4.jpg" alt="Anteprima progetto 4">
+          <h4>Tool CLI Linux</h4>
+          <p>Utility da terminale per ottimizzazione flusso IT.</p>
+        </div>
+      </div>
     </section>
 
     <section class="interests">
       <h3>💡 Interessi</h3>
-      <ul>
-        <li>Automazione IT e scripting</li>
-        <li>Home lab e virtualizzazione</li>
-        <li>Coding e reti</li>
-        <!-- Aggiungi qui altri interessi man mano -->
-      </ul>
+      <div class="grid">
+        <div class="card">
+          <img src="interesse1.jpg" alt="Anteprima automazione">
+          <h4>Automazione IT</h4>
+          <p>Scripting, task schedulati, semplificazione operativa.</p>
+        </div>
+        <div class="card">
+          <img src="interesse2.jpg" alt="Anteprima home lab">
+          <h4>Home lab</h4>
+          <p>Ambiente virtuale per test e simulazioni di rete.</p>
+        </div>
+        <div class="card">
+          <img src="interesse3.jpg" alt="Anteprima reti">
+          <h4>Reti e sicurezza</h4>
+          <p>Firewall, VPN, segmentazione e monitoraggio.</p>
+        </div>
+        <div class="card">
+          <img src="interesse4.jpg" alt="Anteprima linux">
+          <h4>Linux & CLI</h4>
+          <p>Sperimentazione con shell, scripting, tools avanzati.</p>
+        </div>
+      </div>
     </section>
 
     <footer>
       <p>📬 <a href="mailto:simone@email.it">simone@email.it</a></p>
     </footer>
   </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light-theme");
+    }
+  </script>
 </body>
 </html>
