@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   opacity: 0;
   animation: fadeIn 1.5s ease-out forwards;
+  position: relative;
 }
 
 @keyframes fadeIn {
@@ -61,6 +62,12 @@ header h2 {
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
 }
 
 .bio p {
@@ -80,7 +87,7 @@ header h2 {
 
 .btn {
   padding: 0.8rem 1.8rem;
-  background-color: #3b82f6;
+  background-color: #444c5c;
   color: white;
   text-decoration: none;
   border-radius: 12px;
@@ -90,7 +97,7 @@ header h2 {
 }
 
 .btn:hover {
-  background-color: #2563eb;
+  background-color: #5c667a;
   transform: translateY(-2px);
 }
 
@@ -225,11 +232,11 @@ body.light-theme .btn {
 }
 
 body.light-theme .btn {
-  background-color: #a5b4fc;
+  background-color: #cbd5e1;
 }
 
 body.light-theme .btn:hover {
-  background-color: #818cf8;
+  background-color: #94a3b8;
 }
 
 body.light-theme .theme-toggle {
@@ -239,17 +246,4 @@ body.light-theme .theme-toggle {
 
 body.light-theme .theme-toggle:hover {
   background-color: #e0e0e0;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.06), transparent 80%);
-  transition: background 0.2s ease-out;
-  z-index: 0;
 }
