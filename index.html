@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simone Berardo | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
@@ -25,58 +30,53 @@
     </section>
 
     <section class="cta">
-      <a class="btn" href="docs/MY_CV.pdf" download>📄 Scarica il mio CV</a>
+      <a class="btn" href="doc/MY_CV.pdf" download>📄 Scarica il mio CV</a>
       <a class="btn" href="https://www.linkedin.com/in/tuo-linkedin" target="_blank">🔗 Profilo LinkedIn</a>
     </section>
 
-    <section class="projects">
+    <section class="section-links">
+      <div class="grid">
+        <a href="#progetti" class="card overlay-card">
+          <img src="docs/anteprima-progetti.jpg" alt="Progetti">
+          <div class="overlay-text">
+            <h4>📁 Progetti</h4>
+            <p>Scopri tool, script e lavori realizzati</p>
+          </div>
+        </a>
+        <a href="#interessi" class="card overlay-card">
+          <img src="docs/anteprima-interessi.jpg" alt="Interessi">
+          <div class="overlay-text">
+            <h4>💡 Interessi</h4>
+            <p>Tecnologie, automazioni e passioni personali</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="progetti" class="projects">
       <h3>📁 Progetti</h3>
       <div class="grid">
-        <div class="card">
-          <img src="docs/progetto1.jpg" alt="Anteprima progetto 1">
+        <div class="card" onclick="location.href='progetto1.html'">
+          <img src="docs/progetto1.jpg" alt="Progetto 1">
           <h4>Monitoraggio interno</h4>
-          <p>Script Python per monitoraggio rete e sistema.</p>
         </div>
-        <div class="card">
-          <img src="docs/progetto2.jpg" alt="Anteprima progetto 2">
+        <div class="card" onclick="location.href='progetto2.html'">
+          <img src="docs/progetto2.jpg" alt="Progetto 2">
           <h4>Firewall dashboard</h4>
-          <p>Dashboard web per analisi dei log di rete.</p>
-        </div>
-        <div class="card">
-          <img src="docs/progetto3.jpg" alt="Anteprima progetto 3">
-          <h4>Backup automation</h4>
-          <p>Script per gestione backup automatici su rete.</p>
-        </div>
-        <div class="card">
-          <img src="docs/progetto4.jpg" alt="Anteprima progetto 4">
-          <h4>Tool CLI Linux</h4>
-          <p>Utility da terminale per ottimizzazione flusso IT.</p>
         </div>
       </div>
     </section>
 
-    <section class="interests">
+    <section id="interessi" class="interests">
       <h3>💡 Interessi</h3>
       <div class="grid">
-        <div class="card">
-          <img src="docs/interesse1.jpg" alt="Anteprima automazione">
+        <div class="card" onclick="location.href='interesse1.html'">
+          <img src="docs/interesse1.jpg" alt="Interesse 1">
           <h4>Automazione IT</h4>
-          <p>Scripting, task schedulati, semplificazione operativa.</p>
         </div>
-        <div class="card">
-          <img src="docs/interesse2.jpg" alt="Anteprima home lab">
+        <div class="card" onclick="location.href='interesse2.html'">
+          <img src="docs/interesse2.jpg" alt="Interesse 2">
           <h4>Home lab</h4>
-          <p>Ambiente virtuale per test e simulazioni di rete.</p>
-        </div>
-        <div class="card">
-          <img src="docs/interesse3.jpg" alt="Anteprima reti">
-          <h4>Reti e sicurezza</h4>
-          <p>Firewall, VPN, segmentazione e monitoraggio.</p>
-        </div>
-        <div class="card">
-          <img src="docs/interesse4.jpg" alt="Anteprima linux">
-          <h4>Linux & CLI</h4>
-          <p>Sperimentazione con shell, scripting, tools avanzati.</p>
         </div>
       </div>
     </section>
