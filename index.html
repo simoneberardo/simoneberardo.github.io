@@ -6,35 +6,52 @@
   <title>Simone Berardo | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
   <button class="theme-toggle" onclick="toggleTheme()">🌓 Tema</button>
+
   <div class="container">
-    <header>
+    <!-- Header -->
+    <header class="header-flex">
       <a href="contatti.html">
         <img src="doc/foto_linkedin.jpg" alt="Foto profilo di Simone" class="profile-pic" />
       </a>
-      <h1>Simone Berardo</h1>
-      <h2>Sistemista IT</h2>
+      <div class="header-info">
+        <h1>Simone Berardo</h1>
+        <h2>Sistemista IT</h2>
+        <div class="social-icons">
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="doc/MY_CV.pdf" download title="CV"><i class="fas fa-file-alt"></i></a>
+          <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </header>
 
+    <!-- Menu Navigazione -->
+    <nav class="section-menu">
+      <a href="#progetti">📁 Progetti</a>
+      <a href="#interessi">💡 Interessi</a>
+      <a href="#skills">🛠️ Skills</a>
+      <a href="#experience">🚀 Carriera</a>
+      <a href="#apprendimento">📚 Apprendimento</a>
+    </nav>
+
+    <!-- Bio -->
     <section class="bio">
-      <p>
-        Sistemista appassionato di tecnologia, reti e automazione. Mi piace trovare soluzioni smart e imparare ogni giorno qualcosa di nuovo. Cerco sempre l'equilibrio tra semplicità ed efficienza.
-      </p>
+      <p>Sistemista appassionato di tecnologia, reti e automazione. Mi piace trovare soluzioni smart e imparare ogni giorno qualcosa di nuovo. Cerco sempre l'equilibrio tra semplicità ed efficienza.</p>
     </section>
 
+    <!-- CTA
     <section class="cta">
-      <a class="btn" href="doc/MY_CV.pdf" download>📄 Scarica il mio CV</a>
+      <a class="btn" href="docs/CV-Simone.pdf" download>📄 Scarica il mio CV</a>
       <a class="btn" href="https://www.linkedin.com/in/tuo-linkedin" target="_blank">🔗 Profilo LinkedIn</a>
     </section>
-
-    <section class="experience">
+  -->
+    <!-- Esperienze -->
+    <section  id="experience" class="experience">
       <h3>💼 Esperienze lavorative</h3>
       <div class="experience-wrapper">
         <div class="experience-list">
@@ -42,70 +59,59 @@
           <button class="exp-btn" onclick="showExperience('exp2')">Sistemista Junior</button>
           <button class="exp-btn" onclick="showExperience('exp3')">IT Support Specialist</button>
         </div>
-        <div class="experience-details">
-          <div id="exp1" class="exp-content active">
-            <h4>Stage Tecnico IT</h4>
-            <p>Esperienza di stage in ambiente enterprise, configurazione PC, supporto di primo livello, ticketing.</p>
-          </div>
-          <div id="exp2" class="exp-content">
-            <h4>Sistemista Junior</h4>
-            <p>Gestione server Windows/Linux, Active Directory, backup e networking di base.</p>
-          </div>
-          <div id="exp3" class="exp-content">
-            <h4>IT Support Specialist</h4>
-            <p>Supporto utenti, gestione richieste via helpdesk, troubleshooting avanzato e deployment software.</p>
-          </div>
+        <div class="experience-details active" id="exp1">
+          <h4>Stage Tecnico IT</h4>
+          <p>Supporto utenti, installazione software, ticket base.</p>
+        </div>
+        <div class="experience-details" id="exp2">
+          <h4>Sistemista Junior</h4>
+          <p>Gestione server Windows/Linux, AD, backup e rete.</p>
+        </div>
+        <div class="experience-details" id="exp3">
+          <h4>IT Support Specialist</h4>
+          <p>Gestione helpdesk, automazioni, scripting.</p>
         </div>
       </div>
     </section>
 
-    <section class="section-links">
-      <div class="grid">
-        <a href="#progetti" class="card overlay-card">
-          <img src="docs/anteprima-progetti.jpg" alt="Progetti">
-          <div class="overlay-text">
-            <h4>📁 Progetti</h4>
-            <p>Scopri tool, script e lavori realizzati</p>
-          </div>
-        </a>
-        <a href="#interessi" class="card overlay-card">
-          <img src="docs/anteprima-interessi.jpg" alt="Interessi">
-          <div class="overlay-text">
-            <h4>💡 Interessi</h4>
-            <p>Tecnologie, automazioni e passioni personali</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
+    <!-- Sezioni -->
     <section id="progetti" class="projects">
       <h3>📁 Progetti</h3>
       <div class="grid">
-        <div class="card" onclick="location.href='progetto1.html'">
-          <img src="docs/progetto1.jpg" alt="Progetto 1">
-          <h4>Monitoraggio interno</h4>
-        </div>
-        <div class="card" onclick="location.href='progetto2.html'">
-          <img src="docs/progetto2.jpg" alt="Progetto 2">
-          <h4>Firewall dashboard</h4>
-        </div>
+        <div class="card"><img src="docs/progetto1.jpg"><h4>Monitoraggio</h4></div>
+        <div class="card"><img src="docs/progetto2.jpg"><h4>Firewall</h4></div>
       </div>
     </section>
 
     <section id="interessi" class="interests">
       <h3>💡 Interessi</h3>
       <div class="grid">
-        <div class="card" onclick="location.href='interesse1.html'">
-          <img src="docs/interesse1.jpg" alt="Interesse 1">
-          <h4>Automazione IT</h4>
-        </div>
-        <div class="card" onclick="location.href='interesse2.html'">
-          <img src="docs/interesse2.jpg" alt="Interesse 2">
-          <h4>Home lab</h4>
-        </div>
+        <div class="card"><img src="docs/interesse1.jpg"><h4>Automazione</h4></div>
+        <div class="card"><img src="docs/interesse2.jpg"><h4>Homelab</h4></div>
       </div>
     </section>
 
+    <section id="skills" class="skills">
+      <h3>🛠️ Skills</h3>
+      <ul>
+        <li>Networking, firewall, VLAN</li>
+        <li>Windows Server, Linux, AD</li>
+        <li>Scripting: PowerShell, Bash</li>
+        <li>Office 365, Azure AD</li>
+      </ul>
+    </section>
+
+    <section id="carriera" class="carriera">
+      <h3>🚀 Carriera</h3>
+      <p>Dal primo stage alle sfide sistemistiche attuali. Crescita tecnica costante.</p>
+    </section>
+
+    <section id="apprendimento" class="apprendimento">
+      <h3>📚 Apprendimento</h3>
+      <p>Formazione continua con corsi, esperimenti, certificazioni e curiosità infinita.</p>
+    </section>
+
+    <!-- Footer -->
     <footer>
       <p>📬 <a href="mailto:simone@email.it">simone@email.it</a></p>
     </footer>
