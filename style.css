@@ -247,3 +247,16 @@ body.light-theme .theme-toggle {
 body.light-theme .theme-toggle:hover {
   background-color: #e0e0e0;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(255, 255, 255, 0.08), transparent 80%);
+  transition: background 0.2s ease-out;
+  z-index: 0;
+}
