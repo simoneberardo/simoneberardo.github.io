@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Simone Berardo | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -32,6 +32,31 @@
     <section class="cta">
       <a class="btn" href="doc/MY_CV.pdf" download>📄 Scarica il mio CV</a>
       <a class="btn" href="https://www.linkedin.com/in/tuo-linkedin" target="_blank">🔗 Profilo LinkedIn</a>
+    </section>
+
+    <section class="experience">
+      <h3>💼 Esperienze lavorative</h3>
+      <div class="experience-wrapper">
+        <div class="experience-list">
+          <button class="exp-btn active" onclick="showExperience('exp1')">Stage Tecnico IT</button>
+          <button class="exp-btn" onclick="showExperience('exp2')">Sistemista Junior</button>
+          <button class="exp-btn" onclick="showExperience('exp3')">IT Support Specialist</button>
+        </div>
+        <div class="experience-details">
+          <div id="exp1" class="exp-content active">
+            <h4>Stage Tecnico IT</h4>
+            <p>Esperienza di stage in ambiente enterprise, configurazione PC, supporto di primo livello, ticketing.</p>
+          </div>
+          <div id="exp2" class="exp-content">
+            <h4>Sistemista Junior</h4>
+            <p>Gestione server Windows/Linux, Active Directory, backup e networking di base.</p>
+          </div>
+          <div id="exp3" class="exp-content">
+            <h4>IT Support Specialist</h4>
+            <p>Supporto utenti, gestione richieste via helpdesk, troubleshooting avanzato e deployment software.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section-links">

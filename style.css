@@ -260,3 +260,60 @@ body::before {
   transition: background 0.2s ease-out;
   z-index: 0;
 }
+
+.exp-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #2d2d2d;
+  border: none;
+  color: #ccc;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.exp-btn:hover {
+  background-color: #444;
+}
+
+.exp-btn.active {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.experience-wrapper {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.experience-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.experience-details {
+  flex: 2;
+  background-color: #1e1e1e;
+  border: 1px solid #3a3a3a;
+  border-radius: 12px;
+  padding: 1rem;
+  min-height: 250px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.exp-content {
+  display: none;
+  opacity: 0;
+}
+
+.exp-content.active {
+  display: block;
+  opacity: 1;
+}
