@@ -57,3 +57,13 @@ function showExperience(id) {
   const btn = [...document.querySelectorAll('.exp-btn')].find(b => b.getAttribute('onclick').includes(id));
   if (btn) btn.classList.add('active');
 }
+
+// Mostra/nasconde il bottone scroll-to-top
+window.addEventListener('scroll', () => {
+  const btn = document.querySelector('.scroll-to-top');
+  if (window.scrollY > 300) {
+    btn.style.display = 'flex';
+  } else {
+    btn.style.display = 'none';
+  }
+});

@@ -123,10 +123,14 @@
     <section id="skills" class="skills">
       <h3>Skills</h3>
       <ul>
-        <li>Networking, firewall, VLAN</li>
-        <li>Windows Server, Linux, AD</li>
-        <li>Scripting: PowerShell, Bash</li>
-        <li>Office 365, Azure AD</li>
+        <div class="skills-grid">
+          <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
+          <div class="skill-item" style="--i:1"><img src="icons/windows.png" alt="Windows" /></div>
+          <div class="skill-item" style="--i:2"><img src="icons/powershell.png" alt="PowerShell" /></div>
+          <div class="skill-item" style="--i:3"><img src="icons/network.png" alt="Networking" /></div>
+          <div class="skill-item" style="--i:4"><img src="icons/network.png" alt="Networking" /></div>
+          <div class="skill-item" style="--i:5"><img src="icons/network.png" alt="Networking" /></div>
+        </div>
       </ul>
     </section>
 
@@ -147,5 +151,6 @@
   </div>
 
   <script src="script.js"></script>
+  <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 </body>
 </html>

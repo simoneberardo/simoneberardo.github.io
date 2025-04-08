@@ -575,3 +575,149 @@ body.light-theme .exp-btn.active {
 .exp-content.active {
   opacity: 1;
 }
+
+/* Bottone scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1001;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-wrapper {
+    flex-direction: column;
+  }
+
+  .experience-list {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .experience-details {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .skills-grid {
+    justify-content: center;
+    gap: 0;
+  }
+
+  .skill-item {
+    width: 80px;
+    height: 92px;
+    margin: -23px 2px;
+  }
+
+  .skill-item img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Effetto fade-in per esperienza selezionata */
+.exp-content,
+.experience-details {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.experience-details.active,
+.exp-content.active {
+  opacity: 1;
+}
+
+/* Skills esagoni disposti a nido d'ape */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  max-width: 100%;
+  position: relative;
+  gap: 0;
+}
+
+.skill-item {
+  width: 90px;
+  height: 104px;
+  background-color: #2a2a2a;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+  animation: fadeInHex 0.6s ease forwards;
+  animation-delay: calc(var(--i) * 100ms);
+  opacity: 0;
+  margin: 4px;
+  position: relative;
+}
+
+/* Sfalsamento a nido d'ape: ogni seconda riga si sposta orizzontalmente */
+.skills-grid::before {
+  content: "";
+  width: 100%;
+  display: block;
+}
+
+.skill-item {
+  margin: 4px;
+  position: relative;
+}
+
+/* Sposta ogni seconda riga */
+.skill-item:nth-child(6n+4),
+.skill-item:nth-child(6n+5),
+.skill-item:nth-child(6n+6) {
+  margin-top: 52px;
+  transform: translateX(45px);
+}
+
+
+@keyframes fadeInHex {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.skill-item:hover,
+.skill-item.active {
+  transform: scale(1.15);
+  background-color: #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.skill-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+
+
+
