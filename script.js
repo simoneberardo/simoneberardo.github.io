@@ -12,7 +12,7 @@ function toggleTheme() {
 }
 
 // Esperienze switch
-function showExperience(id) {
+/*function showExperience(id) {
   document.querySelectorAll('.experience-details').forEach(el => {
     el.classList.remove('active');
   });
@@ -23,7 +23,7 @@ function showExperience(id) {
   });
   const activeBtn = [...document.querySelectorAll('.exp-btn')].find(btn => btn.textContent.includes(document.getElementById(id).querySelector('h4').textContent));
   if (activeBtn) activeBtn.classList.add('active');
-}
+}*/
 
 // Scrollspy menu attivo
 const links = document.querySelectorAll('.section-menu a');
@@ -37,3 +37,23 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+function showExperience(id) {
+  // Rimuove classe active da tutti i dettagli
+  document.querySelectorAll('.experience-details').forEach(el => {
+    el.classList.remove('active');
+  });
+
+  // Aggiunge classe active SOLO al dettaglio selezionato
+  const selected = document.getElementById(id);
+  if (selected) selected.classList.add('active');
+
+  // Rimuove active da tutti i pulsanti
+  document.querySelectorAll('.exp-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Attiva il pulsante cliccato
+  const btn = [...document.querySelectorAll('.exp-btn')].find(b => b.getAttribute('onclick').includes(id));
+  if (btn) btn.classList.add('active');
+}
