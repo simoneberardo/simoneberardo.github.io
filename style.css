@@ -628,16 +628,23 @@ body.light-theme .exp-btn.active {
   height: 48px;
   font-size: 20px;
   cursor: pointer;
-  display: none;
   align-items: center;
   justify-content: center;
+  display: flex;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  opacity: 1;
+  pointer-events: auto;
 }
 
+
 .scroll-to-top:hover {
-  background-color: #2563eb;
+  transform: scale(1.1);
+  background-color: #8B8682;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

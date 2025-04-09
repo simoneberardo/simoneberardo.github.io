@@ -68,15 +68,7 @@ function showExperience(id) {
   if (btn) btn.classList.add('active');
 }
 
-// Mostra/nasconde il bottone scroll-to-top
-window.addEventListener('scroll', () => {
-  const btn = document.querySelector('.scroll-to-top');
-  if (window.scrollY > 300) {
-    btn.style.display = 'flex';
-  } else {
-    btn.style.display = 'none';
-  }
-});
+
 
 /*const Hex = Honeycomb.extendHex({ size: 50, orientation: 'flat' });
 const Grid = Honeycomb.defineGrid(Hex);
@@ -166,6 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
