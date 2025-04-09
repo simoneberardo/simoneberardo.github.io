@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/honeycomb-grid@3.0.0/dist/honeycomb.min.css">-->
   <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
@@ -20,7 +21,7 @@
       </a>
       <div class="header-info">
         <h1>Simone Berardo</h1>
-        <h2>Sistemista IT</h2>
+        <h2 class=".animate-title">Sistemista IT</h2>
         <div class="social-icons">
           <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
           <a href="doc/MY_CV.pdf" download title="CV"><i class="fas fa-file-alt"></i></a>
@@ -51,8 +52,8 @@
     </section>
   -->
     <!-- Esperienze -->
-    <section  id="experience" class="experience">
-      <h3>Esperienze lavorative</h3>
+    <section  id="experience" class="experience" data-section>
+      <h3 class=".animate-title">Esperienze lavorative</h3>
       <div class="experience-wrapper">
         <div class="experience-list">
           <button class="exp-btn active" onclick="showExperience('exp1')">Sistemista IT</button>
@@ -62,7 +63,7 @@
         <div class="experience-details active" id="exp2">
           <h4>Sistemista IT - Consulenza presso gruppo bancario</h4>
           <p>
-            <section id="esperienze">
+            <section id="esperienze" data-section>
               <p><strong>2017 - mar 2025 · 8 anni 3 mesi</strong><br>
               Torino, Piemonte, Italia</p>
               <ul>
@@ -104,50 +105,71 @@
     </section>
 
     <!-- Sezioni -->
-    <section id="progetti" class="projects">
-      <h3>Progetti</h3>
+    <section id="progetti" class="projects" data-section>
+      <h3 class=".animate-title">Progetti</h3>
       <div class="grid">
         <div class="card"><img src="docs/progetto1.jpg"><h4>Monitoraggio</h4></div>
         <div class="card"><img src="docs/progetto2.jpg"><h4>Firewall</h4></div>
       </div>
     </section>
 
-    <section id="interessi" class="interests">
-      <h3>Interessi</h3>
+    <section id="interessi" class="interests" data-section>
+      <h3 class=".animate-title">Interessi</h3>
       <div class="grid">
         <div class="card"><img src="docs/interesse1.jpg"><h4>Automazione</h4></div>
         <div class="card"><img src="docs/interesse2.jpg"><h4>Homelab</h4></div>
       </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <div class="skills-grid">
-          <div class="skill-row">
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-          </div>
-          <div class="skill-row offset">
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-            <div class="skill-item" style="--i:0"><img src="icons/linux.png" alt="Linux" /></div>
-          </div>
+    <section id="skills" data-section>
+      <h3 class=".animate-title">Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-item">
+          <img src="icons/linux.png" alt="Linux">
+          <span>Linux</span>
         </div>
-      </ul>
+        <div class="skill-item">
+          <img src="icons/windows.png" alt="Windows">
+          <span>Windows</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/powershell.png" alt="PowerShell">
+          <span>PowerShell</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/network.png" alt="Networking">
+          <span>Networking</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/intune.png" alt="Intune">
+          <span>Intune</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/sccm.png" alt="SCCM">
+          <span>SCCM</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/git.png" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/teams.png" alt="Teams">
+          <span>Teams</span>
+        </div>
+        <div class="skill-item">
+          <img src="icons/office.png" alt="Office 365">
+          <span>Office 365</span>
+        </div>
+      </div>
     </section>
-
-    <section id="carriera" class="carriera">
-      <h3>Carriera</h3>
+             
+    <section id="carriera" class="carriera" data-section>
+      <h3 class=".animate-title">Carriera</h3>
       <p>Dal primo stage alle sfide sistemistiche attuali. Crescita tecnica costante.</p>
     </section>
 
-    <section id="apprendimento" class="apprendimento">
-      <h3>Apprendimento</h3>
+    <section id="apprendimento" class="apprendimento" data-section>
+      <h3 class=".animate-title">Apprendimento</h3>
       <p>Formazione continua con corsi, esperimenti, certificazioni e curiosità infinita.</p>
     </section>
 
@@ -157,6 +179,7 @@
     </footer>
   </div>
 
+  <!--<script src="https://cdn.jsdelivr.net/npm/honeycomb-grid@3.0.0/dist/honeycomb.min.js"></script>-->
   <script src="script.js"></script>
   <button class="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 </body>

@@ -1,3 +1,6 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 // Effetto luce cursore
 document.addEventListener('mousemove', e => {
   const x = e.clientX / window.innerWidth * 100;
@@ -67,3 +70,96 @@ window.addEventListener('scroll', () => {
     btn.style.display = 'none';
   }
 });
+
+/*const Hex = Honeycomb.extendHex({ size: 50, orientation: 'flat' });
+const Grid = Honeycomb.defineGrid(Hex);
+const hexes = Grid.rectangle({ width: 5, height: 3 });
+
+const icons = [
+  { name: 'linux' }, { name: 'windows' }, { name: 'powershell' },
+  { name: 'network' }, { name: 'sccm' }, { name: 'intune' },
+  { name: 'azure' }, { name: 'git' }, { name: 'teams' }, { name: 'office' }
+];
+
+const container = document.getElementById('skills-grid');
+const hexWidth = 86.6; // Altezza di un esagono con size 50
+const hexHeight = 100; // Calcolato in base alla forma
+
+hexes.forEach((hex, i) => {
+  if (i >= icons.length) return;
+
+  const div = document.createElement('div');
+  div.className = 'hex-tile';
+
+  // ✅ Calcolo corretto con dimensioni reali da Honeycomb
+  const xOffset = hex.x * (hexWidth * 0.75);
+  const yOffset = hex.y * hexHeight + (hex.x % 2) * (hexHeight / 2);
+
+  div.style.left = `${xOffset}px`;
+  div.style.top = `${yOffset}px`;
+
+  const img = document.createElement('img');
+  img.src = `https://via.placeholder.com/48?text=${icons[i].name}`;
+  img.alt = icons[i].name;
+
+  const label = document.createElement('span');
+  label.textContent = icons[i].name;
+
+  div.appendChild(img);
+  div.appendChild(label);
+  container.appendChild(div);
+});
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll("h2, h3");
+
+  titles.forEach((title) => {
+    title.classList.add("animate-title");
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.6,
+    }
+  );
+
+  titles.forEach((title) => {
+    observer.observe(title);
+  });
+
+  // Override del click sui link del menu
+  document.querySelectorAll(".section-menu a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // blocca comportamento default
+      const id = link.getAttribute("href").replace("#", "");
+      const section = document.getElementById(id);
+
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+
+        // Sezione visibile => reset animazione titolo
+        const title = section.querySelector("h2, h3");
+        if (title) {
+          title.classList.remove("visible");
+
+          // Attendi che scrollIntoView finisca
+          setTimeout(() => {
+            title.classList.add("visible");
+          }, 500);
+        }
+      }
+    });
+  });
+});
+
+
+
+
