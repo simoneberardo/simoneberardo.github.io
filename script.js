@@ -1,6 +1,13 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener("load", () => {
+  if (performance.navigation.type === 1 || performance.getEntriesByType("navigation")[0]?.type === "reload") {
+    window.scrollTo(0, 0);
+  }
+});
+
 // Effetto luce cursore
 document.addEventListener('mousemove', e => {
   const x = e.clientX / window.innerWidth * 100;
