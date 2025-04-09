@@ -98,7 +98,7 @@ body {
 
 .social-icons a:hover {
   transform: scale(1.25);
-  color: #3b82f6;
+  color: #8B8682;
 }
 
 /* Menu sezioni sticky con evidenziazione */
@@ -136,7 +136,7 @@ body {
   right: 10%;
   bottom: 6px;
   height: 2px;
-  background-color: #3b82f6;
+  background-color: #8B8682;
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
@@ -149,7 +149,7 @@ body {
 
 .section-menu a:hover,
 .section-menu a.active {
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: #fff;
   transform: translateY(-2px);
 }
@@ -162,12 +162,12 @@ body.light-theme .section-menu a {
 
 body.light-theme .section-menu a:hover,
 body.light-theme .section-menu a.active {
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: #fff;
 }
 
 body.light-theme .section-menu a::after {
-  background-color: #3b82f6;
+  background-color: #8B8682;
 }
 
 #experience,
@@ -279,7 +279,7 @@ body.light-theme .section-menu a::after {
 }
 
 .exp-btn.active {
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: #fff;
 }
 
@@ -520,11 +520,11 @@ body.light-theme .social-icons a {
 }
 
 body.light-theme .social-icons a:hover {
-  color: #3b82f6;
+  color: #8B8682;
 }
 
 body.light-theme .exp-btn.active {
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: white;
 }
 
@@ -579,7 +579,7 @@ body.light-theme .exp-btn.active {
 }
 
 .exp-btn.active {
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: #fff;
 }
 
@@ -620,7 +620,7 @@ body.light-theme .exp-btn.active {
   bottom: 20px;
   right: 20px;
   z-index: 1001;
-  background-color: #3b82f6;
+  background-color: #8B8682;
   color: white;
   border: none;
   border-radius: 50%;
@@ -753,7 +753,7 @@ body.light-theme .exp-btn.active {
 
 .social-icons a:hover {
   transform: scale(1.25);
-  color: #3b82f6;
+  color: #8B8682;
 }
 
 /* === Skills con CSS Grid === */
@@ -797,7 +797,7 @@ body.light-theme .exp-btn.active {
 
 .skill-item:hover {
   transform: scale(1.05);
-  background-color: #3b82f6;
+  background-color: #8B8682;
 }
 
 @media (max-width: 768px) {
@@ -817,7 +817,6 @@ body.light-theme .exp-btn.active {
 }
 
 /* Tutto il resto del CSS rimane invariato */
-
 
 
 
