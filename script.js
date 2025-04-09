@@ -168,5 +168,35 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const instagramLink = document.getElementById("instagram-link");
+  const qrOverlay = document.getElementById("qr-overlay");
+  const closeBtn = document.querySelector(".qr-close");
+
+  const instagramURL = "https://www.instagram.com/simone_berardo"; 
+
+  instagramLink.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      window.location.href = instagramURL;
+    } else {
+      qrOverlay.style.display = "flex";
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    qrOverlay.style.display = "none";
+  });
+
+  qrOverlay.addEventListener("click", (e) => {
+    // Chiudi solo se clicchi fuori dal popup
+    if (e.target === qrOverlay) {
+      qrOverlay.style.display = "none";
+    }
+  });
+});
+
 
 

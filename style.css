@@ -816,6 +816,64 @@ body.light-theme .exp-btn.active {
   }
 }
 
+#qr-container {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+#qr-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.qr-popup {
+  position: relative;
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s ease-out;
+  text-align: center;
+}
+
+.qr-popup img {
+  width: 240px;
+  height: 240px;
+  transition: transform 0.2s ease;
+}
+
+.qr-popup img:hover {
+  transform: scale(1.05);
+}
+
+.qr-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.qr-close:hover {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+
+
 /* Tutto il resto del CSS rimane invariato */
 
 
